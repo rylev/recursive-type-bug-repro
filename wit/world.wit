@@ -1,0 +1,18 @@
+package component:deleteme;
+
+/// An example world for the component to target.
+world example {
+    export foo;
+    export bar;
+}
+
+interface foo {
+    use bar.{r2};
+    resource r1 {
+        my-func: func(p1: r2);
+    }
+}
+
+interface bar {
+    resource r2 {}
+}
